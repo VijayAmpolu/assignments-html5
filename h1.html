@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .online{
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: #fff;
+            text-align: center;
+        }
+        .offline{
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(255, 38, 38);
+            color: #fff;
+            text-align: center;
+        }   
+    </style>
+</head>
+<body class="body">
+    <div class="status"></div>
+    <div id="error"></div>
+    <iframe src="./iframe.html" frameborder="0"></iframe>
+    
+    
+
+    <script>
+        console.log(window.location);
+        
+        const status = document.querySelector('.status')
+        const error = document.querySelector('#error')
+        console.log(window.navigator);
+            if(window.navigator.onLine==true){
+                status.classList.remove('offline')
+                status.classList.add('online')
+                status.innerText = 'Online'
+            }else{
+                status.classList.remove('online')
+                status.classList.add('offline')
+                status.innerText = 'Offline'
+            }
+
+
+            console.log(window.location);
+
+            if(window.location.hostname === '127.0.0.1'){
+                error.innerHTML = `
+                <h1>Sorry this website is not available for this ip address</h1>
+                `
+            }
+
+
+            if(window.location.protocol == 'http:'){
+                document.body.style.background = "red"
+                document.body.innerHTML = "<h1 style='color:white; text-align:center'>sorry this domine is not secure</h1>"
+            }
+            
+    </script>
+</body>
+</html>

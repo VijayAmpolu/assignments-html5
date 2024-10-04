@@ -1,0 +1,57 @@
+<html>
+<head>
+   <title>Speech to text</title>
+</head>
+   <body>
+      <div class="speaker" style="display: flex;justify-content: space-between;width: 13rem;box-shadow: 0 0 13px #0000003d;border-radius: 5px;">
+         <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+         <button onclick="runSpeechRecog()" style="border: transparent;padding: 0 0.5rem;">
+            Speech
+         </button>
+      </div>
+      <h3 id="output" class="hide"></h3>
+      <script>
+         runSpeechRecog = () => {
+            document.getElementById("output").innerHTML = "Loading text...";
+            var output = document.getElementById('output');
+            var action = document.getElementById('action');
+            let recognization = new webkitSpeechRecognition();
+            recognization.onstart = () => {
+               action.innerHTML = "Listening...";
+            }
+            recognization.onresult = (e) => {
+               var transcript = e.results[0][0].transcript;
+               output.innerHTML = transcript;
+               if(transcript=="hi Siri"){
+                    speek('hello bhaskar')
+               }else if(transcript.toLowerCase() == "who is your husband"){
+                alert('prabhakar')
+               }else if(transcript.toLowerCase()=="who is bhaskar"){
+                alert('Senior Developer')
+               }else if(transcript.toLowerCase()=="who is the sex specialist"){
+                 speek('mr.Upendra upendra upendra from kurnool ')
+               }
+               else if(transcript.toLowerCase()=="who is avinash"){
+                 speek('abhi ram bava')
+               }
+               else if(transcript.toLowerCase()=="who is prabhakar"){
+                 speek('best developer in bangalore')
+               }
+               else if(transcript.toLowerCase()=="who is sex specialist"){
+                 speek('Upendra')
+               }
+               output.classList.remove("hide")
+               action.innerHTML = "";
+            }
+            recognization.start();
+         }
+         function speek(input){
+            const synth = window.speechSynthesis;
+                let text = input
+                const utterThis = new SpeechSynthesisUtterance(text);
+                
+                synth.speak(utterThis);
+         }
+      </script>
+   </body>
+</html>

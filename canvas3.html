@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Text</title>
+</head>
+<body>
+    <canvas id="textCanva" width="400" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('textCanva');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'black';
+        ctx.font = '50pt Times New Roman ';
+        ctx.fillText('Hello, Canvas!', 50, 100);
+
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 2;
+        ctx.strokeText('Hello, Canvas!', 50, 100);
+    </script>
+</body>
+</html>

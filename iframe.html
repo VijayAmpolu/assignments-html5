@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="check()">
+    <div id="container">
+        <h1>This is the content</h1>
+    </div>
+
+
+    <script>
+        console.log(window.location);
+        function check(){
+            if(window.location.href == 'http://127.0.0.1:5500/Assignment%20html5/iframe.html'){
+                document.body.innerHTML = "its available"
+            }else{
+                document.body.innerHTML = "its not available"
+            }
+        }
+        check()
+        
+    </script>
+</body>
+</html>

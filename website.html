@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .word{
+            display: flex;
+            font-size: 6rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .word h1{
+            animation: popup 4.3s linear infinite alternate;
+            animation-delay: var(--time);
+        }
+        
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        @keyframes popup{
+            0%{
+                transform: scale(1);
+                color: #222;
+            }
+            100%{
+                transform: scale(1.2);
+                color: rebeccapurple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="word">
+       <h1 style="--time:0s;"> L</h1>
+        <h1 style="--time:0.3s">e</h1>
+        <h1 style="--time:0.6s">t</h1>
+        <h1 style="--time:1s">’</h1>
+        <h1 style="--time:1.3s">s</h1>
+ 
+        <h1 style="--time:1.6s">h</h1>
+        <h1 style="--time:2s">a</h1>
+        <h1 style="--time:2.3s">v</h1>
+        <h1 style="--time:2.6s">e</h1>
+        <h1 style="--time:3s">a</h1>
+ 
+        <h1 style="--time:3.3s">c</h1>
+        <h1 style="--time:3.6s">h</h1>
+        <h1 style="--time:4s">a</h1>
+        <h1 style="--time:4.3s">t</h1>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .word{
+            display: flex;
+            font-size: 6rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .word{
+            animation: popup 4.3s ease-in-out infinite alternate;
+            animation-delay: var(--time);
+        }
+        
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        @keyframes popup{
+            0%{
+                transform: scale(1);
+                color: #222;
+            }
+            100%{
+                transform: scale(1.2);
+                color: rebeccapurple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="word">let's have a chat</h1>
+    <script>
+        let h1 = document.querySelector('.word');
+        console.log(h1.innerText.split(''));
+        const text =  h1.innerText;
+        h1.innerHTML = ""
+       text.split('').map((item, index)=>{
+            h1.innerHTML += `<span style="--time:0.${index}s">${item}</span>`
+            
+        })
+
+    </script>
+
+</body>
+</html>

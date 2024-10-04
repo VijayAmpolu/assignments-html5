@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="changeHandler()">
+    
+    <script>
+        console.log(screen.availWidth);
+        
+        function changeHandler(){
+            if(screen.availWidth<576){
+                document.body.innerHTML = "<h1>this site is not for this device</h1>"
+                document.body.style.background = "red"
+            }else{
+                 document.body.innerHTML = "<h1>this site is avaiable</h1>"
+                document.body.style.background = "green"
+            }
+        }
+        changeHandler()
+        
+    </script>
+</body>
+</html>

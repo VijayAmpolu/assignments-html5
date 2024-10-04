@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color:  rgb(18, 15, 31);;
+            height: 200vh;
+        }
+        header{
+            background-color: black;
+            display:flex;
+            align-items:center;
+            padding: 15px;
+            gap: 20px;
+        }
+        header nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 30px;
+            margin-left: 350px;
+        }
+        ul li button{
+            border: none;
+            min-width: 130px;
+            padding: 10px;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            color: black;
+            background: linear-gradient(90deg, rgb(112, 81, 198), rgb(58, 32, 162));
+        }
+        .head img{
+            display: flex;
+            align-items: start;
+            justify-content: start;
+        
+        }
+        .icons{
+            margin-left: 80px;
+            gap: 20px;
+        }
+        .icons i{
+            height: 35px;
+            width: 35px;
+            background-color: skyblue;
+            border-radius: 50%;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid purple;
+            margin-left: 10px;
+        }
+        .hero{
+            display: flex;
+            background-color: rgb(18, 15, 31);
+            color: #fff;
+            padding: 4%;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        .left{
+            flex: 1;
+        }
+        .right{
+            flex: 1;
+            
+        }
+        .heading1{
+            font-size: 2.5rem;
+        }
+        .heading-main{
+            font-size: 4rem;
+            color: blueviolet;
+        }
+        .subtitle{
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+        .hero.left img{
+            border-radius: 100%;
+        }
+        .hero.left img:hover{
+            cursor: pointer;
+            border: 3px solid blueviolet;
+            transition: 0.5s;
+        }
+        .right .btns{
+            display: flex;
+            border: none;
+            width: 120px;
+            height: 50px;
+            gap: 30px;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            background-color: black;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .right .btns:hover{
+            background-color: rgb(112, 81, 198);
+            
+        }
+        .mark{
+            width: 100%;
+            background-color: rgb(18, 15, 31);
+            color: white;
+            padding: 10px;
+        }
+        .card1{
+            height: 400px;
+            width: 600px;
+            background-color: blueviolet;
+            padding: 20px;
+            margin: auto;
+            margin-top: 30px;
+
+            
+        }
+        .card1 p{
+            color: white;
+            font-size: 1.1rem;
+        }
+        .card1 i{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+         <img src="https://themejunction.net/html/gerold/demo/assets/img/logo/logo-dark.png" alt="logo" width="60">
+        </div>
+ 
+        <nav>
+         <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Portfolios</a></li>
+             <li><a href="#">Blog</a></li>
+             <li><a href="#">Contact</a></li>
+             <li><button>Hire Me!</button></li>
+         </ul>
+        </nav>
+           
+        <div class="icons">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google-plus"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-github"></i>
+
+        </div>
+     </header>
+    
+  <main>
+    <section class="hero">
+        <div class="left">
+           <img src="https://themejunction.net/html/gerold/demo/assets/img/hero/me.png" alt="loading.." width="400px" style="border-radius: 100px; ">
+        </div>
+            <div class="right">
+                <h1 class="heading1">I am Gerold</h1>
+                <h1 class="heading-main">A creative designer <br> based in London</h1>
+                    <p class="subtitle">I design and code beautifully simple things and i love <br> what i do. Just simple like that!</p>
+            
+                    <div class="btns">
+                        <button>Got To a Project?</button><br>
+                        <button>Lets Talk</button>
+                    </div>
+        </div>
+    </section>
+  </main>
+     
+      <div class="mark">
+            <marquee behavior="scroll" scrollamount="10" bgcolor="black" color="white" direction="left"><h1>Grapic Design  Motion  Development Grapic Design  Motion  Development Grapic Design  Motion  Development</h1></marquee>
+      </div>
+    <br><br><br>
+      <section>
+        <div style="text-align: center;">
+            <h1 style="color: blueviolet; font-size: 2.3rem;">My Recent Works</h1>
+            <p style="color: white; font-size: 1.2rem;">Recent Projects</p>
+        </div>
+        <div class="card1">
+           <p>Ui/UX</p>
+           <p>Deliote</p>
+           <p>Project was about precision and information. <br>That’s all. Our design tem helps clients achieve <br> their marketing Trager and branding that <br>appeals to a website</p>
+            <p><i class="fa-solid fa-check"></i>We provide the most reasonable.</p>
+            <p><i class="fa-solid fa-check"></i>Finish Work Before Deadline.</p>
+            <p><i class="fa-solid fa-check"></i>The certified materials in a timely.</p>
+            <p><i class="fa-solid fa-check"></i>We provide 24/7 on time services</p>
+            <br>
+            <button>Branding</button>
+            <button>Grapic Design</button>
+            <button>User Stories</button>
+        </div>
+      </section>
+</body>
+</html>
